@@ -1,0 +1,129 @@
+.index-screen {
+  header {
+    background-image: linear-gradient(-134deg, $aubergineLight 0%, $aubergin 100%);
+    color: $white;
+    padding-bottom:50px;
+  }
+  header h1 {
+    @include font-size(xxl);
+    text-align:center;
+    font-weight:500;
+    margin:0;
+  }
+  header .grid {
+    align-items:flex-end;
+    justify-content:space-between;
+    flex-direction:column;
+    @include content-max-width;
+    @include only-phone {
+    }
+  }
+  header .grid > * {
+    width:100%;
+    //@include tablet-and-desktop {
+      //width:calc(50% - 50px);
+    //}
+    //@include only-phone {
+    //}
+  }
+  header .grid > * > :last-child {
+    margin-bottom:0;
+  }
+  p, h1, h2, h3 {
+    font-weight:normal;
+    text-align:center;
+  }
+  header .search {
+    display:flex;
+    justify-content:flex-end;
+    margin-top:40px;
+    @include only-phone {
+    }
+  }
+  .search-input {
+    /* background: */
+    background: $smoke;
+    box-shadow: 0 4px 8px 0 rgba(60,60,60,0.10);
+    border-radius: 100px 0 00px 100px;
+    width:100%;
+
+    padding:15px 0 15px 20px;
+    @include font-size(s);
+  }
+  .search-button {
+    background: $magaenta;
+    box-shadow: 0 4px 8px 0 rgba(60,60,60,0.10);
+    border-radius: 0 50px 50px 0;
+    border:none;
+    color:$white;
+    padding:15px 25px 15px 20px;
+  }
+  .popular {
+    text-align:center;
+  }
+  .offer {
+    @include content-max-width;
+    justify-content:space-between;
+    align-items:center;
+    //margin:50px auto;
+  }
+  .offer + .offer {
+    border-top:2px solid $aubergin;
+    margin-top:20px;
+    padding-top:20px;
+  }
+  .demand-price {
+    display:flex;
+    flex-wrap:wrap;
+    > * {
+      width:100%;
+      input {
+        margin-top:5px;
+        padding:8px;
+        @include font-size(l);
+        width:100px;
+        text-align:right;
+      }
+    }
+  }
+  .price {
+    @include font-size(xl)
+    font-family:'Roboto Mono';
+    font-weight:bold;
+    margin-right:30px;
+  }
+  .bottom {
+    align-items:flex-end;
+    justify-content:flex-end;
+  }
+  .data-field {
+    opacity:0.6;
+    @include font-size(s);
+  }
+  .offer-from {
+    @include font-size(l)
+  }
+  .offered-by {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+  .mykey {
+    background:$magaenta;
+    background-image: linear-gradient(-180deg, #F03C6E 0%, #FF96A0 100%);
+    border-radius: 10px;
+    padding:10px 20px 20px 20px;
+    color:$white;
+    @include font-size(l);
+    text-align:center;
+    position:fixed;
+    left:50%;
+    width:80%;
+    max-width:500px;
+    transform:translateX(-50%);
+    bottom:-10px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+}
